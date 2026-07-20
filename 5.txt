@@ -1,0 +1,64 @@
+import scala.io.StdIn
+
+class Person(var name: String, var age: Int, var country: String){
+
+  def getName: String = name
+  def setName(newName: String): Unit={
+    name = newName
+  }
+
+  def getAge: Int = age
+  def setAge(newAge: Int): Unit={
+    age = newAge
+  }
+
+  def getCountry: String = country
+  def setCountry(newCountry: String): Unit={
+    country = newCountry
+  }
+}
+class Student(name: String, age: Int, country: String, var grade: String) extends Person(name, age, country){
+  def getGrade: String = grade
+  def setGrade(newGrade: String): Unit={
+    grade = newGrade
+  }
+}
+object program5a{
+  def main(args: Array[String]): Unit={
+    var student = new Student("Hari",34,"Nepal","A")
+
+    println("Original Record: ")
+    println(s"Name: ${student.getName}")
+    println(s"Age: ${student.getAge}")
+    println(s"Country: ${student.getCountry}")
+    println(s"Grade: ${student.getGrade}")
+
+    student.setName("gend")
+    student.setAge(18)
+    student.setCountry("kenya")
+    student.setGrade(("B"))
+
+    println("\nUpdated Record: ")
+    println(s"Name: ${student.getName}")
+    println(s"Age: ${student.getAge}")
+    println(s"Country: ${student.getCountry}")
+    println(s"Grade: ${student.getGrade}")
+  }
+}
+
+
+import scala.io.StdIn
+
+class Triangle(var side1: Double, var side2: Double, var side3: Double){
+  def isEquilateral(): Boolean = {
+    side1 == side2 && side2 == side3
+  }
+}
+
+object program5b {
+  def main(args: Array[String]): Unit = {
+    var tri = new Triangle(5.0, 6.0, 6.0)
+    println(s"tri is equilateral: ${tri.isEquilateral()}")
+  }
+}
+
