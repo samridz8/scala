@@ -1,0 +1,35 @@
+import scala.io.StdIn
+object sum{
+  def main(args:Array[String]): Unit={
+    println("Enter first integer: ")
+    var a = StdIn.readInt()
+    println("Enter second integer: ")
+    var b = StdIn.readInt()
+    var sum = a+b
+    if(a==b){
+      println(s"${sum+sum+sum}")
+    }
+    else{
+      println(sum)
+    }
+  }
+}
+
+
+
+import scala.io.StdIn
+object sum2 {
+  def main(args: Array[String]): Unit = {
+    println("Enter first integer: ")
+    var a = StdIn.readInt()
+    println("Enter second integer: ")
+    var b = StdIn.readInt()
+    var sum = a + b
+    if (a == 22 || b == 22 || sum == 32) {
+      println("True")
+    }
+    else {
+      println("False")
+    }
+  }
+}
