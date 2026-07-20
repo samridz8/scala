@@ -1,0 +1,29 @@
+import scala.io.StdIn
+object program3a {
+def main(args: Array[String]): Unit={
+  var num = 5
+  var tablesize = 10
+  for(i<-1 to tablesize){
+    var result = num * i
+    println(s"$num * $i = $result")
+  }
+}
+}
+
+
+
+import scala.io.StdIn
+object program3b {
+  def largeElem(num:Array[Int]): Option[Int]={
+    num.maxOption
+  }
+  def main(args:Array[String]):Unit={
+  var num: Array[Int] = Array(2,4,6,80,10)
+  var large: Option[Int] = largeElem(num)
+
+  large match{
+    case None => println("Empty array")
+    case Some(large) => println(s"largest element is: $large")
+  }
+}
+}
