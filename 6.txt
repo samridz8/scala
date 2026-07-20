@@ -1,0 +1,38 @@
+sealed trait Color
+case object Red extends Color
+case object Blue extends Color
+case object Green extends Color
+case object Orange extends Color
+case object Violet extends Color
+object program6a {
+  def main(args: Array[String]): Unit = {
+    val myColor: Color = Violet
+    printColor(myColor)
+
+  }
+
+  def printColor(color: Color): Unit = color match {
+    case Red => println("This is red")
+    case Blue => println("This is blue")
+    case Green => println("This is green")
+    case Orange => println("This is orange")
+    case _ => println("Unknown Color")
+  }
+}
+
+
+
+//Write a Scala program that creates a class ContactInfo with properties name,
+//email, and address. Create a class Customer that includes a ContactInfo object.
+class ContactInfo(val name: String, val email: String, val address: String)
+class Customer(val contactInfo: ContactInfo)
+object program6b {
+def main(args: Array[String]): Unit={
+  val contact = new ContactInfo("Samridh Hada", "samridhada@gmail.com", "Bhaisepati, Kathmandu")
+  val customer = new Customer(contact)
+  println(s"Customer's name: ${customer.contactInfo.name}")
+  println(s"Customer's email: ${customer.contactInfo.email}")
+  println(s"Customer's address: ${customer.contactInfo.address}")
+}
+
+}
