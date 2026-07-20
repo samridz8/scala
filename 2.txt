@@ -1,0 +1,28 @@
+import scala.io.StdIn
+object program2a {
+  def main(args: Array[String]): Unit ={
+    var str = "Hello, World"
+    var removepos = 4
+    var pos = removepos
+
+    if(pos >= 0 && pos < str.length ){
+      var strg = str.substring(0,pos) + str.substring(pos + 1)
+      println(s"original position: $str")
+      println(s"position to remove: $pos")
+      println(s"updated string: $strg")
+    }else{
+      println("Position out of bounds")
+    }
+  }
+}
+
+
+import scala.io.StdIn
+object program2b {
+  def main(args: Array[String]): Unit = {
+    var str = "Hello, World"
+    var a = str.take(5)
+    println(s"${a+str+a}")
+  }
+}
+
